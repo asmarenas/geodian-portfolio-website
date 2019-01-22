@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+
+.navigation {
+  position: fixed;
+  bottom: 196px;
+  left: -217px;
+  transform: rotateZ(-90deg);
+  z-index: 10;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    padding: 1.5rem;
+  }
+
+  a {
+    color: #fff;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      color: $active;
+    }
+  }
+
+  .navigation--active {
+    color: $active;
+  }
+}

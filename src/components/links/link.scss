@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.links {
+  position: fixed;
+  z-index: 7;
+  top: 4%;
+  right: 4%;
+}
+
+.links__icon {
+  margin: 1.3rem;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: $active;
+  }
+}
