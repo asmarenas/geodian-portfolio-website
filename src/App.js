@@ -14,6 +14,7 @@ import "./styles/index.scss";
 import Navigation from "./components/navigation/navigation";
 import Links from "./components/links/links";
 import Pagination from "./components/pagination/pagination";
+import Logo from "./components/logo/logo";
 import Home from "./views/home/home";
 import Portfolio from "./views/portfolio/portfolio";
 import About from "./views/about/about";
@@ -37,6 +38,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <Logo />
         <Navigation
           goToPage={this.goToPage}
           activePage={this.state.activePage}
@@ -46,6 +48,7 @@ class App extends Component {
           activePage={this.state.activePage}
           goToPage={this.goToPage}
         />
+
         <ReactPageScroller
           ref={c => (this.reactPageScroller = c)}
           pageOnChange={this.pageOnChange}

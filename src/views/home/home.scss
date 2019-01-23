@@ -13,166 +13,30 @@
     position: relative;
     overflow: hidden;
 
-    // text
     .home__header {
       width: 590px;
       position: absolute;
       z-index: 3;
-      top: calc(44% - -115px);
-      left: calc(50% - -97px);
+      bottom: 63px;
+      right: 172px;
     }
 
-    // Hexagon big
-
-    .hexagon-big {
+    .home__hex--big {
+      height: 2400px;
+      width: 2079px;
+      fill: $dark-overlay;
       position: absolute;
-      top: calc(44% - 1434px);
-      right: 50%;
-      width: 1700px;
-      height: 981.5px;
-      background-color: $dark-overlay;
-      margin: 490.75px 0;
+      top: calc(50% - 1799px);
+      right: calc(50% - 90px);
     }
 
-    .hexagon-big:before,
-    .hexagon-big:after {
-      content: "";
+    .home__hex--small {
+      height: 800px;
+      width: 693px;
       position: absolute;
-      width: 0;
-      border-left: 850px solid transparent;
-      border-right: 850px solid transparent;
-    }
-
-    .hexagon-big:before {
-      bottom: 100%;
-      border-bottom: 490.75px solid $dark-overlay;
-    }
-
-    .hexagon-big:after {
-      top: 100%;
-      width: 0;
-      border-top: 490.75px solid $dark-overlay;
-    }
-
-    // Hexagon small
-
-    .hexagon {
-      position: absolute;
-      top: calc(44% - 250px);
-      left: calc(50% - 250px);
-      width: 500px;
-      height: 288.68px;
-      margin: 144.34px 0;
-
-      background-image: url("./man-pic.jpg");
-
-      background-size: auto 577.3503px;
-      background-position: center;
-    }
-
-    .hexTop,
-    .hexBottom {
-      position: absolute;
-      z-index: 1;
-      width: 353.55px;
-      height: 353.55px;
-      overflow: hidden;
-      -webkit-transform: scaleY(0.5774) rotate(-45deg);
-      -ms-transform: scaleY(0.5774) rotate(-45deg);
-      transform: scaleY(0.5774) rotate(-45deg);
-      background: inherit;
-      left: 73.22px;
-    }
-
-    /*counter transform the bg image on the caps*/
-    .hexTop:after,
-    .hexBottom:after {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 288.6751345948129px;
-      -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-144.3376px);
-      -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-144.3376px);
-      transform: rotate(45deg) scaleY(1.7321) translateY(-144.3376px);
-      -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-      background: inherit;
-    }
-
-    .hexTop {
-      top: -176.7767px;
-    }
-
-    .hexTop:after {
-      background-position: center top;
-    }
-
-    .hexBottom {
-      bottom: -176.7767px;
-    }
-
-    .hexBottom:after {
-      background-position: center bottom;
-    }
-
-    .hexagon:after {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 0;
-      width: 500px;
-      height: 288.6751px;
-      z-index: 2;
-      background: inherit;
-    }
-
-    // Small hex overlay
-
-    .hexagon-overlay {
-      position: absolute;
-      top: calc(44% - 250px);
-      left: calc(50% - 250px);
-      width: 50px;
-      height: 288.68px;
-      background-color: $color-overlay;
-      margin: 144.34px 0;
-      box-shadow: 0 0 20px $color-overlay;
-    }
-
-    .hexagon-overlay:before,
-    .hexagon-overlay:after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      width: 353.55px;
-      height: 353.55px;
-      -webkit-transform: scaleY(0.5774) rotate(-45deg);
-      -ms-transform: scaleY(0.5774) rotate(-45deg);
-      transform: scaleY(0.5774) rotate(-45deg);
-      background-color: inherit;
-      left: 73.2233px;
-      box-shadow: 0 0 20px $color-overlay;
-    }
-
-    .hexagon-overlay:before {
-      top: -176.7767px;
-    }
-
-    .hexagon-overlay:after {
-      bottom: -176.7767px;
-    }
-
-    /*cover up extra shadows*/
-    .hexagon-overlay span {
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0;
-      width: 500px;
-      height: 288.6751px;
-      z-index: 2;
-      background: inherit;
+      top: calc(50% - 400px);
+      left: calc(50% - 266px);
+      fill: $color-overlay;
     }
   }
 }

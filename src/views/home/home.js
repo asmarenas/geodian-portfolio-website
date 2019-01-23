@@ -1,6 +1,8 @@
 import React from "react";
 import "./home.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Hexagon from "../../components/hexagon/hexagon";
+import HexPicture from "../../components/hexagon-pic/hexPicture";
 
 const Home = ({ goToPage }) => (
   <section className="home">
@@ -21,14 +23,8 @@ const Home = ({ goToPage }) => (
           Contact Me <FontAwesomeIcon icon="caret-right" size="sm" />
         </a>
       </div>
-      <div className="hexagon-big" />
-      <div className="hexagon">
-        <div className="hexTop" />
-        <div className="hexBottom" />
-      </div>
-      <div className="hexagon-overlay">
-        <span />
-      </div>
+      <Hexagon className={"home__hex--big"} />
+      <HexPicture className={"home__hex--small"} />
     </div>
   </section>
 );
