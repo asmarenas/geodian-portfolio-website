@@ -34,7 +34,7 @@
 
   @include laptopSm {
     .home__header {
-      right: 56px;
+      right: 35px;
     }
   }
 
@@ -46,17 +46,28 @@
 
   @include smartphoneL {
     .home__header {
-      width: 400px;
+      width: 70%;
       bottom: 141px;
-      right: calc(50% - 221px);
+      //margin: auto;
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.4rem;
       }
 
       p {
-        font-size: 10px;
+        font-size: 16px;
+        line-height: 1.5rem;
       }
+
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @include smartphone {
+    .home__header {
+      bottom: 90px;
     }
   }
 }

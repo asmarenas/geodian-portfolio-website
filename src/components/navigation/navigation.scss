@@ -6,7 +6,7 @@
   left: -183px;
   transform: rotateZ(-90deg);
   z-index: 10;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 
   .menu-btn {
     position: absolute;
@@ -23,17 +23,6 @@
     height: 6px;
     margin-bottom: 7px;
     transition: all 0.2s ease-in-out;
-  }
-  .menu-btn.open .btn-line:nth-child(1) {
-    transform: rotate(44deg);
-    transform-origin: top left;
-  }
-  .menu-btn.open .btn-line:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-btn.open .btn-line:nth-child(3) {
-    transform: rotate(-44deg);
-    transform-origin: bottom left;
   }
 
   ul {
@@ -54,13 +43,16 @@
     }
   }
 
-  .navigation--active {
+  .page--active {
     color: $active;
   }
 
   // media queries
 }
 @include laptopSm {
+  .navigation {
+    bottom: 274px;
+  }
 }
 @include tablet {
   .navigation {
@@ -85,10 +77,13 @@
     ul {
       margin-top: 80px;
       padding: 0;
+
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
     }
 
     li {
-      display: block;
       padding: 20px;
     }
 
@@ -116,6 +111,14 @@
     .menu-btn .btn-line:nth-child(3) {
       transform: rotate(-44deg);
       transform-origin: bottom left;
+    }
+  }
+}
+
+@include smarphoneLand {
+  .navigation {
+    ul {
+      flex-direction: row;
     }
   }
 }

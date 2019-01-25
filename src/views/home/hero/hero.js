@@ -35,7 +35,7 @@ const Hero = () => (
       >
         <feOffset input="SourceAlpha" />
         <feGaussianBlur stdDeviation="10" result="blur" />
-        <feFlood flood-color="#ffe32e" />
+        <feFlood floodColor="#ffe32e" />
         <feComposite operator="in" in2="blur" />
         <feComposite in="SourceGraphic" />
       </filter>

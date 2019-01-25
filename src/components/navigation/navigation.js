@@ -9,7 +9,7 @@ class Navigation extends React.Component {
 
   // adds class to currently active page
   isActive = value => {
-    return value === this.props.activePage ? "navigation--active" : null;
+    return value === this.props.activePage ? "page--active" : null;
   };
 
   handleClick = () => {

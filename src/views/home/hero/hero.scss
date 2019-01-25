@@ -42,4 +42,10 @@
     width: 1076px;
     height: 1737px;
   }
+
+  @include smarphoneLand {
+    left: calc(50% - 718px);
+    top: calc(50% - 1017px);
+    width: 661px;
+  }
 }
