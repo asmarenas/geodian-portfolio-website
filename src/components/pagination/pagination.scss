@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+
 .pagination {
   position: fixed;
   z-index: 7;
@@ -16,5 +17,18 @@
 
   .pagination--active {
     background: $active;
+  }
+}
+
+@include smartphoneL {
+  .pagination {
+    top: 10%;
+  }
+}
+
+@include smartphone {
+  .pagination {
+    z-index: -10;
+    display: none;
   }
 }

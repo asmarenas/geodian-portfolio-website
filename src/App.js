@@ -35,6 +35,10 @@ class App extends Component {
     this.setState({ activePage: activePage });
   };
 
+  // componentDidMount() {
+  //   this.goToPage(3);
+  // }
+
   render() {
     return (
       <React.Fragment>

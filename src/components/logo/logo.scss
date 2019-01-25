@@ -1,6 +1,18 @@
+@import "../../styles/variables.scss";
 .logo {
   position: fixed;
   z-index: 7;
-  left: 59px;
-  top: 25px;
+  left: 29px;
+  top: 28px;
+  fill: #fff;
+  width: 171px;
+  height: 37px;
+}
+// media queries
+
+@include smartphoneL {
+  .logo {
+    display: none;
+    z-index: 0;
+  }
 }

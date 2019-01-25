@@ -1,4 +1,32 @@
-$dark-overlay: rgba(38, 38, 38, 0.7);
-$light-overlay: rgba(241, 236, 236, 0.9);
-$color-overlay: rgba(255, 222, 0, 0.8);
+$dark-overlay: rgba(0, 0, 0, 0.8);
+$light-overlay: rgba(255, 255, 255, 0.9);
+$color-overlay: rgba(255, 222, 0, 0.88);
 $active: rgb(255, 222, 0);
+
+@mixin laptop {
+  @media screen and (max-width: 1900px) {
+    @content;
+  }
+}
+
+@mixin laptopSm {
+  @media screen and (max-width: 1290px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1040px) {
+    @content;
+  }
+}
+@mixin smartphoneL {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin smartphone {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

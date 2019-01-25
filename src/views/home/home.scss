@@ -3,6 +3,7 @@
 .home {
   height: 100%;
   width: 100%;
+
   background: url("./home-background.jpg") no-repeat fixed;
   background-size: cover;
 
@@ -10,33 +11,52 @@
     height: 100%;
     width: 100%;
     background: $light-overlay;
-    position: relative;
+    position: absolute;
     overflow: hidden;
+  }
 
+  .home__header {
+    width: 590px;
+    position: absolute;
+    z-index: 3;
+    bottom: 63px;
+    right: 172px;
+  }
+
+  .home__hero {
+    background: blue;
+  }
+
+  // media queries
+
+  @include laptop {
+  }
+
+  @include laptopSm {
     .home__header {
-      width: 590px;
-      position: absolute;
-      z-index: 3;
-      bottom: 63px;
-      right: 172px;
+      right: 56px;
     }
+  }
 
-    .home__hex--big {
-      height: 2400px;
-      width: 2079px;
-      fill: $dark-overlay;
-      position: absolute;
-      top: calc(50% - 1799px);
-      right: calc(50% - 90px);
+  @include tablet {
+    .home__header {
+      width: 485px;
     }
+  }
 
-    .home__hex--small {
-      height: 800px;
-      width: 693px;
-      position: absolute;
-      top: calc(50% - 400px);
-      left: calc(50% - 266px);
-      fill: $color-overlay;
+  @include smartphoneL {
+    .home__header {
+      width: 400px;
+      bottom: 141px;
+      right: calc(50% - 221px);
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 10px;
+      }
     }
   }
 }

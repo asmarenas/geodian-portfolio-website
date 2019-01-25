@@ -15,3 +15,10 @@
     color: $active;
   }
 }
+
+@include smartphoneL {
+  .links {
+    top: calc(100vh - 87px);
+    right: calc(50% - 129px);
+  }
+}

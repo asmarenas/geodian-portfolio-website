@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+
+.about__hero {
+  position: absolute;
+  top: calc(50% - 1903px);
+  left: calc(50% - 2267px);
+  width: 2847px;
+  height: 2562px;
+
+  .hero--big {
+    fill: $dark-overlay;
+  }
+
+  .hero__overlay {
+    fill: $color-overlay;
+    stroke: #ffe32e;
+  }
+
+  // media queries
+
+  @include laptop {
+    top: calc(50% - 1637px);
+    left: calc(50% - 1531px);
+    width: 2014px;
+    height: 2323px;
+  }
+
+  @include tablet {
+    left: calc(50% - 1663px);
+  }
+
+  @include smartphoneL {
+    left: calc(50% - 1393px);
+    top: calc(50% - 1304px);
+    width: 1670px;
+    height: 1746px;
+  }
+
+  @include smartphone {
+    left: calc(50% - 899px);
+    top: calc(50% - 1197px);
+    width: 1076px;
+    height: 1737px;
+  }
+}
