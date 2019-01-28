@@ -1,16 +1,30 @@
 @import "../../styles/variables.scss";
+
 .logo {
   position: fixed;
   z-index: 7;
-  left: 29px;
-  top: 28px;
+  left: 57px;
+  top: 47px;
+  fill: black;
+  width: 275px;
+  height: 73px;
+}
+
+.logo-background-dark {
   fill: #fff;
-  width: 171px;
-  height: 37px;
 }
 // media queries
 
-@include smartphoneL {
+@include laptop {
+  .logo {
+    left: 29px;
+    top: 28px;
+    width: 171px;
+    height: 37px;
+  }
+}
+
+@include tablet-portrait {
   .logo {
     display: none;
     z-index: 0;

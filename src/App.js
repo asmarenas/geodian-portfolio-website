@@ -13,7 +13,7 @@ import "./styles/index.scss";
 
 import Navigation from "./components/navigation/navigation";
 import Links from "./components/links/links";
-import Pagination from "./components/pagination/pagination";
+// import Pagination from "./components/pagination/pagination";
 import Logo from "./components/logo/logo";
 import Home from "./views/home/home";
 import Portfolio from "./views/portfolio/portfolio";
@@ -24,7 +24,9 @@ library.add(faCaretRight, faFacebookF, faTwitter, faLinkedin, faGithub);
 
 class App extends Component {
   state = {
-    activePage: 1
+    activePage: 1,
+    btnBackground: "btn-background-dark",
+    logoBackground: "logo-background-dark"
   };
 
   goToPage = pageNumber => {
@@ -32,26 +34,35 @@ class App extends Component {
   };
 
   pageOnChange = activePage => {
-    this.setState({ activePage: activePage });
+    if (activePage === 1) {
+      this.setState({
+        activePage: activePage,
+        btnBackground: "btn-background-dark",
+        logoBackground: "logo-background-dark"
+      });
+    } else {
+      this.setState({
+        activePage: activePage,
+        btnBackground: null,
+        logoBackground: null
+      });
+    }
   };
-
-  // componentDidMount() {
-  //   this.goToPage(3);
-  // }
 
   render() {
     return (
       <React.Fragment>
-        <Logo />
+        <Logo logoBackground={this.state.logoBackground} />
         <Navigation
           goToPage={this.goToPage}
           activePage={this.state.activePage}
+          btnBackground={this.state.btnBackground}
         />
         <Links />
-        <Pagination
+        {/* <Pagination
           activePage={this.state.activePage}
           goToPage={this.goToPage}
-        />
+        /> */}
 
         <ReactPageScroller
           ref={c => (this.reactPageScroller = c)}
@@ -60,7 +71,7 @@ class App extends Component {
           goToPage={this.goToPage}
         >
           <Home goToPage={this.goToPage} />
-          <Portfolio />
+          {/* <Portfolio /> */}
           <About />
           <Contact />
         </ReactPageScroller>

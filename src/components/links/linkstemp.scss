@@ -1,0 +1,18 @@
+@include tv {
+  .links__icon {
+    font-size: 45px;
+  }
+}
+
+@include smartphoneL {
+  .links {
+    top: calc(100vh - 87px);
+    right: calc(50% - 129px);
+  }
+}
+
+@include smartphone {
+  .links {
+    display: none;
+  }
+}

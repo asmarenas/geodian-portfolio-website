@@ -1,10 +1,10 @@
 import React from "react";
 import "./logo.scss";
 
-const Logo = () => {
+const Logo = ({ logoBackground }) => {
   return (
     <svg
-      className="logo"
+      className={`logo ${logoBackground}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 800 185.199"
     >

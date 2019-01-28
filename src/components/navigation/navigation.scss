@@ -2,8 +2,8 @@
 
 .navigation {
   position: fixed;
-  bottom: 189px;
-  left: -183px;
+  bottom: 351px;
+  left: -285px;
   transform: rotateZ(-90deg);
   z-index: 10;
   transition: 0.2s ease-in-out;
@@ -18,7 +18,7 @@
   }
   .menu-btn .btn-line {
     display: block;
-    background: white;
+    background: black;
     width: 40px;
     height: 6px;
     margin-bottom: 7px;
@@ -31,11 +31,12 @@
 
   li {
     display: inline-block;
-    padding: 1.5rem;
+    padding: 30px;
   }
 
   a {
-    color: #ffff;
+    color: black;
+    font-size: 35px;
     transition: 0.5s ease-in-out;
 
     &:hover {
@@ -43,24 +44,46 @@
     }
   }
 
+  .dark-background {
+    color: #fff;
+  }
+
   .page--active {
     color: $active;
   }
+}
 
-  // media queries
-}
-@include laptopSm {
+@include laptop {
   .navigation {
-    bottom: 274px;
-  }
-}
-@include tablet {
-  .navigation {
-    bottom: calc(100vh - 400px);
+    bottom: 241px;
+    left: -237px;
+    a {
+      font-size: 22px;
+    }
   }
 }
 
-@include smartphoneL {
+@include laptop-1 {
+  .navigation {
+    bottom: 206px;
+    left: -217px;
+    a {
+      font-size: 18px;
+    }
+  }
+}
+
+@include tablet-landscape {
+  .navigation {
+    bottom: calc(100% - 428px);
+    left: -217px;
+    a {
+      font-size: 18px;
+    }
+  }
+}
+
+@include tablet-portrait {
   .navigation {
     transform: rotateZ(0deg);
     background: $dark-overlay;
@@ -72,6 +95,12 @@
     .menu-btn {
       display: initial;
       right: -77px;
+    }
+
+    .menu-btn {
+      .btn-background-dark {
+        background: #ffff;
+      }
     }
 
     ul {
@@ -92,6 +121,7 @@
       padding: 15px;
       font-size: 1.5rem;
       text-align: center;
+      color: #fff;
     }
   }
 
@@ -99,6 +129,9 @@
     left: 0;
     .menu-btn {
       right: 11px;
+      .btn-line {
+        background: #fff;
+      }
     }
 
     .menu-btn .btn-line:nth-child(1) {
@@ -115,7 +148,7 @@
   }
 }
 
-@include smarphoneLand {
+@include phone-landscape {
   .navigation {
     ul {
       flex-direction: row;

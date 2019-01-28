@@ -4,36 +4,36 @@ $color-overlay: rgba(255, 222, 0, 0.88);
 $active: rgb(255, 222, 0);
 
 @mixin laptop {
-  @media screen and (max-width: 1900px) {
+  @media screen and (max-width: 2000px) {
     @content;
   }
 }
 
-@mixin laptopSm {
-  @media screen and (max-width: 1370px) {
+@mixin laptop-1 {
+  @media screen and (max-width: 1600px) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media screen and (max-width: 1040px) {
-    @content;
-  }
-}
-@mixin smartphoneL {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-@mixin smartphone {
-  @media screen and (max-width: 480px),
-    (max-width: 1000px) and (max-height: 600px) {
+@mixin tablet-landscape {
+  @media screen and (max-width: 1400px) {
     @content;
   }
 }
 
-@mixin smarphoneLand {
-  @media screen and (max-width: 1000px) and (max-height: 400px) {
+@mixin tablet-portrait {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin phone-portrait {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin phone-landscape {
+  @media (max-width: 1000px) and (max-height: 500px) {
     @content;
   }
 }

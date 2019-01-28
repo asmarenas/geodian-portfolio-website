@@ -1,16 +1,8 @@
 import React from "react";
+import "./portfolio.scss";
 
 const Portfolio = () => (
-  <div
-    style={{
-      background: "grey",
-      height: "100%",
-      width: "100%",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center"
-    }}
-  >
+  <div className="portfolio">
     <h1>Portfolio Page</h1>
   </div>
 );

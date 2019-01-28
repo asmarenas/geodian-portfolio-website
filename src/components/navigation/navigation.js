@@ -4,14 +4,33 @@ import "./navigation.scss";
 class Navigation extends React.Component {
   state = {
     active: false,
-    class: null
+    class: null,
+    btnBackground: "btn-background-dark"
   };
 
-  // adds class to currently active page
+  // componentDidUpdate(prevProps) {
+  //   if (this.props !== prevProps) {
+  //     this.setState({
+  //       ...this.state,
+  //       btnBackground:
+  //         this.props.activePage !== 1 ? null : "btn-background-dark"
+  //     });
+  //   }
+  // }
+
   isActive = value => {
-    return value === this.props.activePage ? "page--active" : null;
+    // adds class  if menu background is dark
+    const isDarkBackground =
+      this.props.activePage === 1 ? "dark-background" : null;
+
+    // adds class if page is active
+    const isPageActive =
+      value === this.props.activePage ? "page--active" : null;
+
+    return isDarkBackground + " " + isPageActive;
   };
 
+  //opens menu drawer in mobile view
   handleClick = () => {
     this.setState({
       active: !this.state.active,
@@ -20,14 +39,14 @@ class Navigation extends React.Component {
   };
 
   render() {
-    const { goToPage } = this.props;
+    const { goToPage, btnBackground } = this.props;
 
     return (
       <nav className={`navigation ${this.state.class}`}>
         <div onClick={this.handleClick} className="menu-btn  ">
-          <div className="btn-line" />
-          <div className="btn-line" />
-          <div className="btn-line" />
+          <div className={`btn-line ${btnBackground}`} />
+          <div className={`btn-line ${btnBackground}`} />
+          <div className={`btn-line ${btnBackground}`} />
         </div>
         <ul>
           <li>

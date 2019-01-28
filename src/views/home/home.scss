@@ -3,71 +3,69 @@
 .home {
   height: 100%;
   width: 100%;
-
   background: url("./home-background.jpg") no-repeat fixed;
   background-size: cover;
+}
 
-  .home__overlay {
-    height: 100%;
-    width: 100%;
-    background: $light-overlay;
-    position: absolute;
-    overflow: hidden;
-  }
+.home__overlay {
+  height: 100%;
+  width: 100%;
+  background: $light-overlay;
+  position: absolute;
+  overflow: hidden;
+}
 
+.home__header {
+  width: 40%;
+  font-size: 33px;
+  position: absolute;
+  z-index: 3;
+  bottom: 100px;
+  right: 172px;
+}
+
+//Media queries
+
+@include laptop {
   .home__header {
-    width: 590px;
-    position: absolute;
-    z-index: 3;
-    bottom: 63px;
-    right: 172px;
+    font-size: 20px;
   }
+}
 
-  .home__hero {
-    background: blue;
+@include tablet-landscape {
+  .home__header {
+    font-size: 18px;
   }
+}
 
-  // media queries
+@include tablet-portrait {
+  .home__header {
+    width: 70%;
+    right: 10%;
+    bottom: 15%;
 
-  @include laptop {
-  }
-
-  @include laptopSm {
-    .home__header {
-      right: 35px;
+    a {
+      font-size: 28px;
     }
   }
+}
 
-  @include tablet {
-    .home__header {
-      width: 485px;
+@include phone-portrait {
+  .home__header {
+    right: 7%;
+    bottom: 25%;
+    font-size: 13px;
+
+    a {
+      font-size: 20px;
     }
   }
+}
 
-  @include smartphoneL {
-    .home__header {
-      width: 70%;
-      bottom: 141px;
-      //margin: auto;
-
-      h1 {
-        font-size: 1.4rem;
-      }
-
-      p {
-        font-size: 16px;
-        line-height: 1.5rem;
-      }
-
-      a {
-        font-size: 1.5rem;
-      }
-    }
-  }
-
-  @include smartphone {
-    .home__header {
-      bottom: 90px;
-    }
+@include phone-landscape {
+  .home__header {
+    right: 3%;
+    bottom: 23%;
+    font-size: 13px;
   }
 }

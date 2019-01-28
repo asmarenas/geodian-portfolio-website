@@ -12,27 +12,28 @@ const About = () => (
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
           consectetur beatae non corporis error architecto assumenda quas
           dolorum quidem placeat vitae repellendus nisi amet harum obcaecati
-          numquam voluptate dicta. Placeat!
         </p>
         <h2>My Skills</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus
           optio sunt officia
         </p>
-        <div className="about__skills">
-          <h3>Web Design</h3> <span>90%</span>
-        </div>
-        <div className="skills__line--web" />
+        <div className="skills__container">
+          <div className="about__skills">
+            <h3>Web Design</h3> <span>90%</span>
+          </div>
+          <div className="skills__line--web" />
 
-        <div className="about__skills">
-          <h3>HTML / CSS</h3> <span>70%</span>
-        </div>
-        <div className="skills__line--html" />
+          <div className="about__skills">
+            <h3>HTML / CSS</h3> <span>70%</span>
+          </div>
+          <div className="skills__line--html" />
 
-        <div className="about__skills">
-          <h3>Javascript</h3> <span>80%</span>
+          <div className="about__skills">
+            <h3>Javascript</h3> <span>80%</span>
+          </div>
+          <div className="skills__line--java" />
         </div>
-        <div className="skills__line--java" />
       </div>
     </div>
 

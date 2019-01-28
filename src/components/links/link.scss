@@ -4,11 +4,12 @@
   position: fixed;
   z-index: 7;
   top: 20px;
-  right: 26px;
+  right: 20px;
 }
 
 .links__icon {
-  margin: 1.3rem;
+  margin: 1em;
+  font-size: 30px;
   transition: 0.3s ease;
 
   &:hover {
@@ -16,15 +17,37 @@
   }
 }
 
-@include smartphoneL {
-  .links {
-    top: calc(100vh - 87px);
-    right: calc(50% - 129px);
+@include laptop {
+  .links__icon {
+    font-size: 21px;
   }
+}
 
-  @include smartphone {
-    .links {
-      display: none;
-    }
+@include tablet-portrait {
+  .links__icon {
+    font-size: 27px;
+  }
+}
+
+@include phone-portrait {
+  // .links {
+  //   top: calc(100% - 80px);
+  //   right: 10%;
+  //   width: 80%;
+  //   display: flex;
+  //   justify-content: space-evenly;
+  // }
+  // .links__icon {
+  //   font-size: 25px;
+  // }
+
+  .links {
+    display: none;
+  }
+}
+
+@include phone-landscape {
+  .links {
+    display: none;
   }
 }

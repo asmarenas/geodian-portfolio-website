@@ -1,0 +1,53 @@
+@include tablet {
+  .about {
+    .about__content-container {
+      flex-basis: 82%;
+      .about__content {
+        font-size: 14px;
+        padding: 6%;
+        margin-right: 59px;
+      }
+    }
+    .about__shapes-container {
+      flex-basis: 28%;
+    }
+  }
+}
+
+@include smartphone {
+  .about {
+    .about__content-container {
+      .about__content {
+        font-size: 8px;
+        padding: 5%;
+        margin-right: 22px;
+        .about__skills {
+          width: 93%;
+        }
+      }
+    }
+  }
+}
+
+@include smarphoneLand {
+  .about {
+    .about__content-container {
+      .about__content {
+        font-size: 7px;
+        padding: 1%;
+        margin-right: 23px;
+      }
+    }
+  }
+
+  @include tv {
+    .about__content {
+      font-size: 30px;
+    }
+  }
+  
+  @include laptop {
+    .about__content {
+      font-size: 12px;
+    }
+  }

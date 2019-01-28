@@ -1,0 +1,48 @@
+@include tv {
+  font-size: 40px;
+
+  .home__header {
+    width: 1000px;
+  }
+}
+
+@include laptop {
+}
+
+@include laptopSm {
+  .home__header {
+    right: 35px;
+  }
+}
+
+@include tablet {
+  .home__header {
+    width: 485px;
+  }
+}
+
+@include smartphoneL {
+  .home__header {
+    width: 70%;
+    bottom: 141px;
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5rem;
+    }
+
+    a {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include smartphone {
+  .home__header {
+    bottom: 90px;
+  }
+}
