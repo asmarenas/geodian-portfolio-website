@@ -1,0 +1,200 @@
+@import "../../styles/variables.scss";
+
+.contact {
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+}
+
+.contact__form-grid {
+  flex-basis: 56%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__form-container {
+  flex-basis: 60%;
+  padding: 0 0 0 10%;
+  font-size: 26px;
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+.contact__input {
+  display: block;
+  width: 70%;
+  border: none;
+  border-bottom: 2px solid grey;
+  outline: none;
+  padding: 1.2em 0;
+  margin: 1.2em 0;
+  // border: 1px solid red;
+}
+
+label {
+  display: block;
+  margin: 1.9em 0 1em 0;
+  color: grey;
+}
+
+.contact__textarea {
+  width: 70%;
+  height: 5em;
+  display: block;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid grey;
+  resize: none;
+  overflow: hidden;
+}
+
+.contact__btn {
+  font-weight: bold;
+  background: none;
+  padding: 1em 2em;
+  margin: 2.1em 0;
+  border: 4px solid black;
+  border-radius: 50px;
+}
+// Shapes
+
+.contact__shapes-grid {
+  position: relative;
+  height: 100%;
+  flex-basis: 44%;
+  overflow: hidden;
+}
+
+.contact__hexagon-1 {
+  position: absolute;
+  top: calc(50% - 1376px);
+  width: 1430px;
+  fill: $dark-overlay;
+}
+
+.contact__hexagon-2 {
+  position: absolute;
+  top: calc(50% - 316px);
+  width: 1430px;
+  fill: $color-overlay;
+}
+
+// media queries
+
+@include laptop {
+  .contact__form-container {
+    flex-basis: 60%;
+    font-size: 13px;
+  }
+}
+
+@include tablet-portrait {
+  .contact__form-container {
+    flex-basis: 87%;
+  }
+}
+
+@include phone-portrait {
+  .contact__form-grid {
+    flex-basis: 95%;
+  }
+
+  .contact__shapes-grid {
+    flex-basis: 5%;
+  }
+
+  .contact__form-container {
+    flex-basis: 98%;
+    font-size: 16px;
+    padding: 0 2% 0 10%;
+    p {
+      margin-bottom: 0.1em;
+    }
+  }
+  .contact__input {
+    width: 80%;
+    padding: 0.5em 0;
+    margin: 1.2em 0;
+  }
+
+  label {
+    margin: 1em 0 0.7em 0;
+    color: grey;
+  }
+
+  .contact__textarea {
+    width: 80%;
+    min-height: 4em;
+    overflow: inherit;
+  }
+
+  .contact__btn {
+    padding: 0.7em 2em;
+    margin: 1.1em 0;
+  }
+
+  .contact__hexagon-1 {
+    top: calc(50% - 1250px);
+    width: 1430px;
+  }
+
+  .contact__hexagon-2 {
+    top: calc(50% - 404px);
+    width: 1430px;
+  }
+}
+
+@include phone-landscape {
+  .contact__form-grid {
+    flex-basis: 98%;
+  }
+
+  .contact__shapes-grid {
+    flex-basis: 2%;
+  }
+
+  .contact__form-container {
+    flex-basis: 98%;
+    font-size: 11px;
+    padding: 0 0 0 18%;
+    p {
+      margin-bottom: 0.1em;
+    }
+  }
+  .contact__input {
+    width: 80%;
+    padding: 0.5em 0;
+    margin: 1.2em 0;
+  }
+
+  label {
+    margin: 1em 0 0.7em 0;
+  }
+
+  .contact__textarea {
+    width: 80%;
+    height: 4em;
+    overflow: inherit;
+  }
+
+  .contact__btn {
+    padding: 0.7em 2em;
+    margin: 1.1em 0;
+  }
+
+  .contact__hexagon-1 {
+    top: calc(50% - 1250px);
+    width: 1430px;
+  }
+
+  .contact__hexagon-2 {
+    top: calc(50% - 404px);
+    width: 1430px;
+  }
+}

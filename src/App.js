@@ -71,7 +71,7 @@ class App extends Component {
           goToPage={this.goToPage}
         >
           <Home goToPage={this.goToPage} />
-          {/* <Portfolio /> */}
+          <Portfolio />
           <About />
           <Contact />
         </ReactPageScroller>
