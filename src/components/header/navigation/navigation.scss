@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "../../../styles/variables.scss";
 
 .navigation {
   position: fixed;
@@ -44,11 +44,11 @@
     }
   }
 
-  .dark-background {
+  .on-dark-background {
     color: #fff;
   }
 
-  .page--active {
+  .active {
     color: $active;
   }
 }

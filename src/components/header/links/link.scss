@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "../../../styles/variables.scss";
 
 .links {
   position: fixed;
@@ -15,6 +15,9 @@
   &:hover {
     color: $active;
   }
+}
+.on-dark-background {
+  color: #ffff;
 }
 
 @include laptop {

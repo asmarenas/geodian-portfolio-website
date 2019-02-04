@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactPageScroller from "react-page-scroller";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
@@ -11,10 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./styles/index.scss";
 
-import Navigation from "./components/navigation/navigation";
-import Links from "./components/links/links";
-// import Pagination from "./components/pagination/pagination";
-import Logo from "./components/logo/logo";
+import Header from "./components/header/header";
 import Home from "./views/home/home";
 import Portfolio from "./views/portfolio/portfolio";
 import About from "./views/about/about";
@@ -23,59 +20,41 @@ import Contact from "./views/contact/contact";
 library.add(faCaretRight, faFacebookF, faTwitter, faLinkedin, faGithub);
 
 class App extends Component {
-  state = {
-    activePage: 1,
-    btnBackground: "btn-background-dark",
-    logoBackground: "logo-background-dark"
-  };
+  // state = {
+  //   activePage: 1
+  // };
 
-  goToPage = pageNumber => {
-    this.reactPageScroller.goToPage(pageNumber);
-  };
-
-  pageOnChange = activePage => {
-    if (activePage === 1) {
-      this.setState({
-        activePage: activePage,
-        btnBackground: "btn-background-dark",
-        logoBackground: "logo-background-dark"
-      });
-    } else {
-      this.setState({
-        activePage: activePage,
-        btnBackground: null,
-        logoBackground: null
-      });
-    }
-  };
+  // setActivePage = page => {
+  //   this.setState({ ...this.statye, activePage: page });
+  // };
+  // pageOnChange = activePage => {
+  //   if (activePage === 1) {
+  //     this.setState({
+  //       activePage: activePage,
+  //       btnBackground: "btn-background-dark",
+  //       logoBackground: "logo-background-dark"
+  //     });
+  //   } else {
+  //     this.setState({
+  //       activePage: activePage,
+  //       btnBackground: null,
+  //       logoBackground: nul
+  //     });
+  //   }
+  // };
 
   render() {
     return (
-      <React.Fragment>
-        <Logo logoBackground={this.state.logoBackground} />
-        <Navigation
-          goToPage={this.goToPage}
-          activePage={this.state.activePage}
-          btnBackground={this.state.btnBackground}
-        />
-        <Links />
-        {/* <Pagination
-          activePage={this.state.activePage}
-          goToPage={this.goToPage}
-        /> */}
+      <Router>
+        <React.Fragment>
+          <Header />
 
-        <ReactPageScroller
-          ref={c => (this.reactPageScroller = c)}
-          pageOnChange={this.pageOnChange}
-          animationTimer={700}
-          goToPage={this.goToPage}
-        >
-          <Home goToPage={this.goToPage} />
-          <Portfolio />
-          <About />
-          <Contact />
-        </ReactPageScroller>
-      </React.Fragment>
+          <Route exact path="/" component={Home} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+        </React.Fragment>
+      </Router>
     );
   }
 }

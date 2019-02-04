@@ -3,6 +3,7 @@
 .home {
   height: 100%;
   width: 100%;
+  overflow: hidden;
   background: url("./home-background.jpg") no-repeat fixed;
   background-size: cover;
 }
