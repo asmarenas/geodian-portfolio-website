@@ -50,6 +50,7 @@
 
   .active {
     color: $active;
+    pointer-events: none;
   }
 }
 

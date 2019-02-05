@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
@@ -46,14 +47,27 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <React.Fragment>
-          <Header />
-
-          <Route exact path="/" component={Home} />
-          <Route path="/portfolio" component={Portfolio} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-        </React.Fragment>
+        <Route
+          render={({ location }) => (
+            <React.Fragment>
+              <Header />
+              <TransitionGroup>
+                <CSSTransition
+                  key={location.key}
+                  classNames="fade"
+                  timeout={500}
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/portfolio" component={Portfolio} />
+                    <Route path="/about" component={About} />
+                    <Route path="/contact" component={Contact} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            </React.Fragment>
+          )}
+        />
       </Router>
     );
   }

@@ -3,9 +3,12 @@
 .home {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   background: url("./home-background.jpg") no-repeat fixed;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .home__overlay {

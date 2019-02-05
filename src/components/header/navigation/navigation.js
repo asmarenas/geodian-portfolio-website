@@ -4,6 +4,12 @@ import { NavLink } from "react-router-dom";
 
 const Navigation = ({ navLinkClass }) => (
   <nav className={`navigation ${navLinkClass}`}>
+    {/* Hamburger */}
+    {/* <div onClick={this.handleClick} className="menu-btn  ">
+          <div className={`btn-line ${btnBackground}`} />
+          <div className={`btn-line ${btnBackground}`} />
+          <div className={`btn-line ${btnBackground}`} />
+        </div> */}
     <ul>
       <li>
         <NavLink exact className={navLinkClass} to="/">
