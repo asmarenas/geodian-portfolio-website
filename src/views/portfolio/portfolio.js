@@ -8,7 +8,7 @@ const Portfolio = () => {
     <section className="portfolio">
       <div className="portfolio__container">
         <div className="portfolio__container--secondary secondary-1">
-          <Project projects={projects.left_column} />{" "}
+          <Project projects={projects.left_column} />
         </div>
         <div className="portfolio__container--secondary secondary-2">
           <Project projects={projects.right_column} />

@@ -6,7 +6,7 @@ const projects = {
       url: "./img/my-favorite-collection.jpg",
       title: "My Favorite Collection",
       text: "Photography",
-      link: "./"
+      link: "project/myfavorite"
     },
     {
       id: 2,
