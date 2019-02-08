@@ -1,17 +1,41 @@
-@include tv {
+
+
+
+}
+.on-dark-background {
+  color: #ffff;
+}
+
+@include laptop {
   .links__icon {
-    font-size: 45px;
+    font-size: 21px;
   }
 }
 
-@include smartphoneL {
+@include tablet-portrait {
+  .links__icon {
+    font-size: 27px;
+  }
+}
+
+@include phone-portrait {
+  // .links {
+  //   top: calc(100% - 80px);
+  //   right: 10%;
+  //   width: 80%;
+  //   display: flex;
+  //   justify-content: space-evenly;
+  // }
+  // .links__icon {
+  //   font-size: 25px;
+  // }
+
   .links {
-    top: calc(100vh - 87px);
-    right: calc(50% - 129px);
+    display: none;
   }
 }
 
-@include smartphone {
+@include phone-landscape {
   .links {
     display: none;
   }

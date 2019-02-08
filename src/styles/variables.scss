@@ -3,11 +3,30 @@ $light-overlay: rgba(255, 255, 255, 0.9);
 $color-overlay: rgba(255, 222, 0, 0.88);
 $active: rgb(255, 222, 0);
 
-@mixin laptop {
-  @media screen and (max-width: 2000px) {
+@mixin phone-landscape {
+  @media (min-width: 700px) and (min-height: 200px) {
     @content;
   }
 }
+
+@mixin tablet-portrait {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1650px) {
+    @content;
+  }
+}
+///////////////
 
 @mixin laptop-1 {
   @media screen and (max-width: 1600px) {
@@ -16,24 +35,13 @@ $active: rgb(255, 222, 0);
 }
 
 @mixin tablet-landscape {
-  @media screen and (max-width: 1400px) {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }
 
-@mixin tablet-portrait {
-  @media screen and (max-width: 900px) {
-    @content;
-  }
-}
 @mixin phone-portrait {
   @media screen and (max-width: 600px) {
-    @content;
-  }
-}
-
-@mixin phone-landscape {
-  @media (max-width: 1000px) and (max-height: 500px) {
     @content;
   }
 }

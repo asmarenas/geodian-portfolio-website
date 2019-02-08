@@ -1,32 +1,22 @@
 @import "../../../styles/variables.scss";
-
 .logo {
   position: fixed;
   z-index: 7;
-  left: 57px;
-  top: 47px;
+  right: 0;
+  top: 0;
   fill: black;
-  width: 275px;
-  height: 73px;
-}
-
-.on-dark-background {
-  fill: #fff;
-}
-// media queries
-
-@include laptop {
-  .logo {
-    left: 29px;
-    top: 28px;
-    width: 171px;
-    height: 37px;
-  }
+  width: 80px;
+  height: 50px;
 }
 
 @include tablet-portrait {
   .logo {
-    display: none;
-    z-index: 0;
+    left: 26px;
+    top: 23px;
+    width: 134px;
+    height: 49px;
+  }
+  .on-dark-background {
+    fill: #fff;
   }
 }

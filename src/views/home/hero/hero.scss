@@ -2,10 +2,10 @@
 
 .about__hero {
   position: absolute;
-  top: calc(50% - 2712px);
-  left: calc(50% - 3693px);
-  width: 5051px;
-  height: 3742px;
+  left: calc(50% - 899px);
+  top: calc(50% - 1197px);
+  width: 1076px;
+  height: 1737px;
 }
 
 .hero--big {
@@ -17,56 +17,20 @@
   stroke: #ffe32e;
 }
 
-// Media queries
-
-@include laptop {
-  .about__hero {
-    top: calc(50% - 1679px);
-    left: calc(50% - 1900px);
-    width: 2352px;
-    height: 2323px;
-  }
-}
-
-@include laptop-1 {
-  .about__hero {
-    top: calc(50% - 1612px);
-    left: calc(50% - 1522px);
-    width: 1972px;
-    height: 2323px;
-  }
-}
-
-@include tablet-landscape {
-  .about__hero {
-    top: calc(50% - 1623px);
-    left: calc(50% - 1661px);
-    width: 2042px;
-    height: 2323px;
-  }
-}
-
 @include tablet-portrait {
   .about__hero {
-    top: calc(50% - 1693px);
-    left: calc(50% - 1688px);
+    top: calc(50% - 1623px);
+    left: calc(50% - 1609px);
+    width: 1962px;
+    height: 2323px;
   }
 }
 
-@include phone-portrait {
+@include desktop {
   .about__hero {
-    left: calc(50% - 899px);
-    top: calc(50% - 1197px);
-    width: 1076px;
-    height: 1737px;
-  }
-}
-
-@include phone-landscape {
-  .about__hero {
-    left: calc(50% - 718px);
-    top: calc(50% - 1017px);
-    width: 619px;
-    height: 1710px;
+    top: calc(50% - 1806px);
+    left: calc(50% - 2124px);
+    width: 2648px;
+    height: 2427px;
   }
 }

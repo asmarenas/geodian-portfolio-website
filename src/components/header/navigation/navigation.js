@@ -2,40 +2,58 @@ import React from "react";
 import "./navigation.scss";
 import { NavLink } from "react-router-dom";
 
-const Navigation = ({ navLinkClass }) => (
-  <nav className={`navigation ${navLinkClass}`}>
-    {/* Hamburger */}
-    {/* <div onClick={this.handleClick} className="menu-btn  ">
-          <div className={`btn-line ${btnBackground}`} />
-          <div className={`btn-line ${btnBackground}`} />
-          <div className={`btn-line ${btnBackground}`} />
-        </div> */}
-    <ul>
-      <li>
-        <NavLink exact className={navLinkClass} to="/">
-          Home
-        </NavLink>
-      </li>
+const Navigation = ({ state, handleClick }) => {
+  const { navLinkClass, activeClassOnMobile } = state;
+  // console.log(props);
+  return (
+    <React.Fragment>
+      <div className="navigation__top-bar" />
 
-      <li>
-        <NavLink className={navLinkClass} to="/portfolio">
-          Portfolio
-        </NavLink>
-      </li>
+      <nav className={`navigation  ${navLinkClass} ${activeClassOnMobile}`}>
+        {/* Hamburger */}
+        <div className="btn" onClick={handleClick}>
+          <div className="btn-line" />
+          <div className="btn-line" />
+          <div className="btn-line" />
+        </div>
+        <ul className="navigation__ul">
+          <li className="navigation__li">
+            <NavLink
+              exact
+              className={`navigation__link ${navLinkClass}`}
+              to="/"
+            >
+              Home
+            </NavLink>
+          </li>
 
-      <li>
-        <NavLink className={navLinkClass} to="/about">
-          About
-        </NavLink>
-      </li>
+          <li className="navigation__li">
+            <NavLink
+              className={`navigation__link ${navLinkClass}`}
+              to="/portfolio"
+            >
+              Portfolio
+            </NavLink>
+          </li>
 
-      <li>
-        <NavLink className={navLinkClass} to="/contact">
-          Contact
-        </NavLink>
-      </li>
-    </ul>
-  </nav>
-);
+          <li className="navigation__li">
+            <NavLink className={`navigation__link ${navLinkClass}`} to="/about">
+              About
+            </NavLink>
+          </li>
+
+          <li className="navigation__li">
+            <NavLink
+              className={`navigation__link ${navLinkClass}`}
+              to="/contact"
+            >
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </React.Fragment>
+  );
+};
 
 export default Navigation;

@@ -1,7 +1,10 @@
+@import "./variables.scss";
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
@@ -20,28 +23,49 @@ body {
   overflow: hidden;
 }
 
-h1 {
-  font-size: 2.6em;
+p {
+  line-height: 1.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #494848;
 }
 
-p {
-  line-height: 2em;
-  color: #494848;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+  // display: inline-block;
 }
 
 a {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+
+  display: block;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    color: $active !important;
+  }
 }
 
 section {
   position: absolute;
   top: 0;
   left: 0;
-  overflow: hidden;
   height: 100%;
   width: 100%;
+  max-width: 2000px;
+  max-height: 1100px;
+
+  overflow: hidden;
+  margin-top: 50px;
 }
 
 img {
@@ -53,23 +77,23 @@ img {
 //transitions
 
 .fade-enter {
-  // opacity: 0;
-
   transform: translateY(100%);
 }
 .fade-enter.fade-enter-active {
-  // opacity: 1;
   transform: translateY(0);
-  transition: 500ms ease-in;
+  transition: 600ms ease-out;
 }
 .fade-exit {
-  //opacity: 1;
-
   transform: translateY(0);
 }
 
 .fade-exit.fade-exit-active {
-  //opacity: 0;
   transform: translateY(-100%);
-  transition: 500ms ease-in;
+  transition: 600ms ease-out;
+}
+
+@include tablet-portrait {
+  section {
+    margin: 0;
+  }
 }

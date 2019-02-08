@@ -6,64 +6,64 @@
 }
 
 .home__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background: $light-overlay;
+}
+
+.home__container {
   position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home__header {
-  width: 40%;
-  font-size: 33px;
-  position: absolute;
-  z-index: 3;
-  bottom: 100px;
-  right: 172px;
+  flex-basis: 80%;
+  padding: 0.5em;
+  z-index: 2;
 }
 
-//Media queries
-
-@include laptop {
-  .home__header {
-    font-size: 20px;
-  }
-}
-
-@include tablet-landscape {
-  .home__header {
-    font-size: 18px;
-  }
+.home__link {
+  font-size: 1.5em;
+  margin-top: 1.5em;
 }
 
 @include tablet-portrait {
-  .home__header {
-    width: 70%;
-    right: 10%;
-    bottom: 15%;
+  .home__container {
+    justify-content: flex-end;
+    // align-items: flex-start;
+  }
 
-    a {
-      font-size: 28px;
-    }
+  .home__header {
+    flex-basis: 40em;
+    padding: 4em;
+    //margin-top: 20em;
   }
 }
 
-@include phone-portrait {
-  .home__header {
-    right: 7%;
-    bottom: 25%;
-    font-size: 13px;
+@include laptop {
+  .home__container {
+    // justify-content: flex-end;
+    align-items: flex-end;
+  }
 
-    a {
-      font-size: 20px;
-    }
+  .home__header {
+    padding: 4em;
+    margin-bottom: 4em;
   }
 }
 
-@include phone-landscape {
+@include desktop {
   .home__header {
-    right: 3%;
-    bottom: 23%;
-    font-size: 13px;
+    font-size: 26px;
   }
 }

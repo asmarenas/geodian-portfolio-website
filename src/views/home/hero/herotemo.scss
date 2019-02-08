@@ -1,0 +1,49 @@
+.about__hero {
+  position: absolute;
+  top: calc(50% - 2712px);
+  left: calc(50% - 3693px);
+  width: 5051px;
+  height: 3742px;
+}
+
+// Media queries
+
+@include laptop {
+  .about__hero {
+    top: calc(50% - 1679px);
+    left: calc(50% - 1900px);
+    width: 2352px;
+    height: 2323px;
+  }
+}
+
+@include laptop-1 {
+  .about__hero {
+    top: calc(50% - 1612px);
+    left: calc(50% - 1522px);
+    width: 1972px;
+    height: 2323px;
+  }
+}
+
+@include tablet-landscape {
+}
+
+@include tablet-portrait {
+  .about__hero {
+    top: calc(50% - 1693px);
+    left: calc(50% - 1688px);
+  }
+}
+
+@include phone-portrait {
+}
+
+@include phone-landscape {
+  .about__hero {
+    left: calc(50% - 718px);
+    top: calc(50% - 1017px);
+    width: 619px;
+    height: 1710px;
+  }
+}

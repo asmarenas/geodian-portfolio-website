@@ -34,13 +34,13 @@ class App extends Component {
       <Router>
         <Route
           render={({ location }) => (
-            <React.Fragment>
+            <div className="container__main">
               <Header />
               <TransitionGroup>
                 <CSSTransition
                   key={location.key}
                   classNames="fade"
-                  timeout={500}
+                  timeout={600}
                 >
                   <Switch location={location}>
                     <Route exact path="/" component={Home} />
@@ -54,7 +54,7 @@ class App extends Component {
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
-            </React.Fragment>
+            </div>
           )}
         />
       </Router>

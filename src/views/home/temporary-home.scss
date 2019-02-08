@@ -1,48 +1,48 @@
-@include tv {
-  font-size: 40px;
-
-  .home__header {
-    width: 1000px;
-  }
-}
+//Media queries
 
 @include laptop {
-}
-
-@include laptopSm {
   .home__header {
-    right: 35px;
+    font-size: 20px;
   }
 }
 
-@include tablet {
+@include tablet-landscape {
   .home__header {
-    width: 485px;
+    font-size: 18px;
   }
 }
 
-@include smartphoneL {
+@include tablet-portrait {
   .home__header {
     width: 70%;
-    bottom: 141px;
-
-    h1 {
-      font-size: 1.4rem;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.5rem;
-    }
+    right: 10%;
+    bottom: 15%;
 
     a {
-      font-size: 1.5rem;
+      font-size: 28px;
     }
   }
 }
 
-@include smartphone {
+@include phone-portrait {
+  .home__overlay {
+    overflow: auto;
+    min-height: 150%;
+  }
   .home__header {
-    bottom: 90px;
+    font-size: 22px;
+    justify-content: left;
+
+    a {
+      font-size: 20px;
+    }
+  }
+}
+
+@include phone-landscape {
+  .home__header {
+    right: 3%;
+    bottom: 23%;
+    font-size: 13px;
   }
 }
