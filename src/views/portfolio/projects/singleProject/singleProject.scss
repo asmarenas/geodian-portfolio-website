@@ -1,101 +1,181 @@
 @import "../../../../styles/variables.scss";
-.project {
-  &__grid {
-    width: 100%;
-    height: 100%;
-    padding-top: 8em;
-    overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-  &__grid--main {
-    width: 45%;
-    margin: 0 8em 0 0;
-    // border: 1px solid blue;
-  }
-
-  &__grid--aside {
-    width: 18%;
-    // border: 1px solid red;
-  }
-
-  &__grid--footer {
-    // border: solid 1px green;
-    width: 69%;
-    padding: 3em;
-  }
-}
-
-.project-content {
-  //border: 1px solid green;
-}
-
-.project-images {
-  //border: 1px solid brown;
+.project-l-grid__container {
+  width: 100%;
+  height: calc(100% - 50px);
+  overflow: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__img--top {
-    padding: 4em 0;
-  }
-
-  &__img--bottom {
-    width: 44%;
-    margin-top: 4em;
-  }
+  flex-wrap: wrap;
+  padding: 1em;
 }
 
-.project-info {
-  padding-top: 6.4em;
-  //border: 1px solid blue;
-
-  &__info-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__title {
-    margin: 0 0 1em 0;
-  }
-  &__text-info--bold {
-    font-weight: bold;
-    color: black;
-    margin: 0.3em 0;
+  .project-l-grid__column--1 {
+    flex-basis: 100%;
   }
 
-  &__text-info {
-    margin: 0.3em 0;
+    .project-c-images__img--top {
+      padding: 1em 0;
+    }  
+
+  .project-l-grid__column--2 {
+    flex-basis: 100%;
   }
 
-  &__title--bottom {
-    margin: 3em 0 0 0;
-  }
-
-  &__links-container {
-    display: flex;
-    justify-content: space-between;
-    width: 39%;
-    margin: 1.3em 0;
-  }
-
-  &__link {
-    transition: 0.3s ease;
-    &:hover {
-      color: $active;
+    .project-c-info {
+      padding-top: 1em;
     }
+
+      .project-c-info__title {
+        margin: 0 0 1em 0;
+      }
+
+      .project-c-info__text-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+        .project-c-info__text--left {
+          font-weight: bold;
+          color: black;
+          margin: 0.3em 0;
+        }
+
+        .project-c-info__text--right {
+          margin: 0.3em 0;
+        }s
+
+        .project-c-info__links-title {
+          margin: 2em 0 0 0;
+          text-align: center;
+          border-top: 1px solid black;
+          padding: 1em 0;
+        }
+
+        .project-c-info__links-container {
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          margin: 1em 0 2em 0;
+        }
+  
+  .project-l-grid__column--3 {
+    flex-basis: 100%;
   }
 
-  &__img-container {
-    padding-top: 27em;
+    .project-c-footer__link {
+      font-size: 1.3em;
+      padding: 1em 1em;
+    }
+
+    .project-c-footer__icon {
+      margin: 0 10px;
+    }
+  
+//Media queries
+
+@include tablet-portrait {
+
+  .project-l-grid__container {
+    height: calc(100% - 5em);
+    margin-top: 5em;
   }
+    .project-l-grid__column--1 {
+      margin: 0 5em;
+    }
+    .project-l-grid__column--2 {
+      margin: 0 5em;
+    }
+    .project-c-footer__link {
+      margin: 0 2.5em;
+      padding: 1em 1em;
+    }
 }
 
-.project-footer__link {
-  font-size: 1.3em;
-  padding: 1em 1em;
+@include tablet-landscape {
+   
+  .project-l-grid__column--1 {
+    margin: 0 2em 0 5em;
+    flex-basis: 40%;
+  }
+
+  .project-l-grid__column--2 {
+    margin: 1em;
+    flex-basis: 38%;
+  }
+
+  .project-c-footer__link {
+    margin: 1em 2.5em;
+  }
+  
 }
-.project-footer__icon {
-  margin: 0 10px;
+
+@include laptop {
+
+  .project-l-grid__column--1 {
+    margin: 0 7em 0 10em;
+    flex-basis: 45%;
+  }
+
+    .project-c-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+      .project-c-images__img--top {
+        padding: 4em 0;
+      }
+
+      .project-c-images__img--bottom {
+        width: 44%;
+        margin-top: 4em;
+      }
+
+
+  .project-l-grid__column--2 {
+    margin: 0;
+    flex-basis: 25%;
+  }
+
+    .project-c-info {
+      padding-top: 6.4em;
+    }
+
+      .project-c-info__links-title {
+        margin: 4em 0 0 0 ;
+        border: none;
+        text-align: left;
+      }
+
+      .project-c-info__links-container {
+        justify-content: space-between;
+        width: 40%;
+      }
+
+
+
+    .project-c-info__img-container {
+      padding-top: 27em;
+    }
+
+  .project-c-footer__link {
+    margin: 1em 4em;
+  }
+
+}
+
+@include desktop {
+  .project-l-grid__column--1 {
+    margin: 0 7em 0 15em;
+    flex-basis: 43%;
+  }
+  
+  .project-l-grid__column--2 {
+    margin: 0;
+    flex-basis: 20%;
+  }
+
+  .project-c-footer__link {
+    margin: 1em 6em;
+  }
 }

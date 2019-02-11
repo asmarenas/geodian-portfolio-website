@@ -4,9 +4,9 @@ import building from "./building.jpg";
 import Hexagon from "../../components/hexagon/hexagon";
 
 const About = () => (
-  <section className="about">
-    <div className="about__content-container">
-      <div className="about__content">
+  <section className="about-l-grid">
+    <div className="about-l-grid__column-1">
+      <div className="about-c-content">
         <h1>About Me</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
@@ -18,30 +18,30 @@ const About = () => (
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus
           optio sunt officia
         </p>
-        <div className="skills__container">
-          <div className="about__skills">
+        <div className="about-c-content__skills-graph">
+          <div className="about-c-content__skill-container">
             <h3>Web Design</h3> <span>90%</span>
           </div>
-          <div className="skills__line--web" />
+          <div className="about-c-content__color-line--web" />
 
-          <div className="about__skills">
+          <div className="about-c-content__skill-container">
             <h3>HTML / CSS</h3> <span>70%</span>
           </div>
-          <div className="skills__line--html" />
+          <div className="about-c-content__color-line--html" />
 
-          <div className="about__skills">
+          <div className="about-c-content__skill-container">
             <h3>Javascript</h3> <span>80%</span>
           </div>
-          <div className="skills__line--java" />
+          <div className="about-c-content__color-line--js" />
         </div>
       </div>
     </div>
 
-    <div className="about__shapes-container">
-      <div className="about__rectangle">
-        <div className="about__rectangle-overlay" />
+    <div className="about-l-grid__column-2">
+      <div className="about-c__rectangle">
+        <div className="about-c__rectangle-overlay" />
       </div>
-      <Hexagon className={"about__hexagon"} image={building} />
+      <Hexagon className={"about-c__hexagon"} image={building} />
     </div>
   </section>
 );

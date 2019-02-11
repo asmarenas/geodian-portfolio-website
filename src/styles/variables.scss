@@ -9,8 +9,14 @@ $active: rgb(255, 222, 0);
   }
 }
 
-@mixin tablet-portrait {
-  @media screen and (min-width: 600px) {
+    @mixin tablet-portrait {
+      @media screen and (min-width: 600px) {
+        @content;
+      }
+    }
+
+@mixin tablet-landscape {
+  @media (min-width: 900px) {
     @content;
   }
 }
@@ -36,7 +42,7 @@ $active: rgb(255, 222, 0);
 }
 
 @mixin tablet-landscape {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 900px) {
     @content;
   }
 }
