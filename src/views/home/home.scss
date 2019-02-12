@@ -3,28 +3,26 @@
 .home {
   background: url("./home-background.jpg") no-repeat fixed;
   background-size: cover;
+  margin-top: 50px;
+  padding-top: 0;
 }
 
-.home__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: $light-overlay;
-}
+  .home__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $light-overlay;
+  }
 
-.home__container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .home__container {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
 .home__header {
   flex-basis: 80%;
@@ -38,9 +36,13 @@
 }
 
 @include tablet-portrait {
+
+  .home {
+    padding-top: 0;
+    margin-top: 0;
+  }
   .home__container {
     justify-content: flex-end;
-    // align-items: flex-start;
   }
 
   .home__header {

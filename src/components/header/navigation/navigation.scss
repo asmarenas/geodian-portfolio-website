@@ -16,11 +16,12 @@
 .navigation {
   position: fixed;
   top: 0;
-  left: -70%;
+  left:0;
   width: 70%;
   height: 100%;
   background: #fff;
   z-index: 10;
+  transform: translateX(-100%);
   transition: 0.1s ease-out;
 
   &__ul {
@@ -59,7 +60,7 @@
 }
 
 .mobile-nav--open {
-  left: 0;
+  transform: translateX(0%);
 
   .btn {
     right: 12px;
@@ -82,14 +83,6 @@
   }
 }
 
-// @include phone-landscape {
-//   .navigation {
-//     &__ul {
-//       flex-direction: row;
-//     }
-//   }
-// }
-
 @include tablet-portrait {
   .navigation__top-bar {
     display: none;
@@ -100,18 +93,14 @@
   }
 
   .navigation {
-    //position: fixed;
+   
     top: 110px;
     left: -6px;
     width: auto;
-    // height: 100%;
+    
     background: none;
 
     &__ul {
-      // display: flex;
-
-      // flex-direction: column;
-      // align-items: center;
 
       margin-top: 0;
     }

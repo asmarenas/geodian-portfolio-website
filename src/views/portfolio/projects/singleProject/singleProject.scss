@@ -1,8 +1,9 @@
 @import "../../../../styles/variables.scss";
 
+
 .project-l-grid__container {
   width: 100%;
-  height: calc(100% - 50px);
+  height: 100%;
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
@@ -74,6 +75,10 @@
 //Media queries
 
 @include tablet-portrait {
+
+  .project-l-grid {
+    padding-top: 0;
+  }
 
   .project-l-grid__container {
     height: calc(100% - 5em);
