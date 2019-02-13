@@ -1,18 +1,23 @@
+// -----------------------------//
+//    Global styles             //
+//------------------------------//
+
+
 @import "./variables.scss";
 
 html {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 16px;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+           font-size: 16px;
 }
 
 *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -39,14 +44,12 @@ ul {
 li {
   padding: 0;
   margin: 0;
-  // display: inline-block;
 }
 
 a {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
-
   display: block;
   transition: 0.5s ease-in-out;
 
@@ -54,7 +57,7 @@ a {
     color: $active !important;
   }
 }
-
+ 
 section {
   position: absolute;
   top: 0;
@@ -71,7 +74,9 @@ img {
   height: auto;
 }
 
-//transitions
+//-------------------------//
+//    Transition           //
+//-------------------------//
 
 .fade-enter {
   transform: translateY(100%);
@@ -89,8 +94,28 @@ img {
   transition: 600ms ease-out;
 }
 
+//-----------------------------//
+//       Media queries         //
+//-----------------------------// 
+
+
 @include tablet-portrait {
   section {
     margin: 0;
   }
+}
+
+@include desktop-large {
+
+  .container__main {
+    position: relative;
+    left: calc(50% - 1000px);
+    top: calc(50vh - 500px);
+    width: 2000px;
+    height: 1000px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 32px -6px rgba(0,0,0,0.24);
+       -moz-box-shadow: 0px 0px 32px -6px rgba(0,0,0,0.24);
+            box-shadow: 0px 0px 32px -6px rgba(0,0,0,0.24);
+   }
 }

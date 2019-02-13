@@ -11,8 +11,17 @@
   margin: 0.8em;
 }
 
+//---- Media queries -----//
+
 @include tablet-portrait {
   .links {
     display: flex;
+  }
+}
+
+@include desktop-large {
+  .links {
+    top: calc(50vh - 480px);
+    right: calc(50% - 980px);
   }
 }

@@ -3,48 +3,54 @@ import "./navigation.scss";
 import { NavLink } from "react-router-dom";
 
 const Navigation = ({ state, handleClick }) => {
-  const { navLinkClass, activeClassOnMobile } = state;
-  // console.log(props);
+  const { navLinkClass, activeClassOnMobile, activeClassButton } = state;
+
   return (
     <React.Fragment>
-      <div className="navigation__top-bar" />
+      <div className="c-navigation__top-bar" />
 
-      <nav className={`navigation  ${navLinkClass} ${activeClassOnMobile}`}>
-        {/* Hamburger */}
-        <div className="btn" onClick={handleClick}>
-          <div className="btn-line" />
-          <div className="btn-line" />
-          <div className="btn-line" />
+      <nav className={`c-navigation  ${navLinkClass} ${activeClassOnMobile}`}>
+        <div
+          className={`c-hamburger-btn ${activeClassButton} `}
+          onClick={handleClick}
+        >
+          <div className="c-hamburger-btn__line" />
+          <div className="c-hamburger-btn__line" />
+          <div className="c-hamburger-btn__line" />
         </div>
-        <ul className="navigation__ul">
-          <li className="navigation__li">
+
+        <ul className="c-navigation__ul">
+          <li className="c-navigation__li">
             <NavLink
               exact
-              className={`navigation__link ${navLinkClass}`}
+              className={`c-navigation__link ${navLinkClass}`}
               to="/"
             >
               Home
             </NavLink>
           </li>
 
-          <li className="navigation__li">
+          <li className="c-navigation__li">
             <NavLink
-              className={`navigation__link ${navLinkClass}`}
+              className={`c-navigation__link ${navLinkClass}`}
               to="/portfolio"
             >
               Portfolio
             </NavLink>
           </li>
 
-          <li className="navigation__li">
-            <NavLink className={`navigation__link ${navLinkClass}`} to="/about">
+          <li className="c-navigation__li">
+            <NavLink
+              className={`c-navigation__link ${navLinkClass}`}
+              to="/about"
+            >
               About
             </NavLink>
           </li>
 
-          <li className="navigation__li">
+          <li className="c-navigation__li">
             <NavLink
-              className={`navigation__link ${navLinkClass}`}
+              className={`c-navigation__link ${navLinkClass}`}
               to="/contact"
             >
               Contact

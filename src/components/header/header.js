@@ -9,7 +9,8 @@ class Header extends React.Component {
     navLinkClass: "on-dark-background",
     logoClass: "on-dark-background",
     linksClass: null,
-    activeClassOnMobile: null
+    activeClassOnMobile: null,
+    activeClassButton: null
   };
   // if Navigation or,Logo or, Links is on light background, then changes it color to dark
   componentDidUpdate(prevProps) {
@@ -19,14 +20,16 @@ class Header extends React.Component {
           ...this.state,
           navLinkClass: null,
           logoClass: null,
-          activeClassOnMobile: null
+          activeClassOnMobile: null,
+          activeClassButton: null
         });
       } else {
         this.setState({
           ...this.state,
           navLinkClass: "on-dark-background",
           logoClass: "on-dark-background",
-          activeClassOnMobile: null
+          activeClassOnMobile: null,
+          activeClassButton: null
         });
       }
     }
@@ -38,7 +41,10 @@ class Header extends React.Component {
       ...this.state,
       activeClassOnMobile: this.state.activeClassOnMobile
         ? null
-        : "mobile-nav--open"
+        : "js-navigation--open",
+      activeClassButton: this.state.activeClassButton
+        ? null
+        : "js-hamburger-btn--transformed"
     });
   };
 

@@ -33,6 +33,12 @@ $active: rgb(255, 222, 0);
   }
 }
 
+@mixin desktop-large {
+  @media screen and (min-width: 2000px) {
+    @content;
+  }
+}
+
 ///////////////
 
 @mixin laptop-1 {

@@ -20,3 +20,10 @@
     fill: #fff;
   }
 }
+
+@include desktop-large {
+  .logo {
+    top: calc(50vh - 480px);
+    left: calc(50% - 970px);
+  }
+}
