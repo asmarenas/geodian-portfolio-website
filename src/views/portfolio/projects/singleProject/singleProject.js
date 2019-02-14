@@ -81,21 +81,33 @@ const SingleProject = () => (
 
           <h2 className="project-c-info__links-title">Share This Project</h2>
           <div className="project-c-info__links-container">
-            <a href="!#">
+            <a
+              href="https://www.facebook.com/error-no-page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon
                 className="project-c-info__link"
                 icon={["fab", "facebook-f"]}
                 size="lg"
               />
             </a>
-            <a href="!#">
+            <a
+              href="https://twitter.com/error-no-page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon
                 className="project-c-info__link"
                 icon={["fab", "twitter"]}
                 size="lg"
               />
             </a>
-            <a href="!#">
+            <a
+              href="https://www.linkedin.com/error-no-page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon
                 className="project-c-info__link"
                 icon={["fab", "linkedin"]}

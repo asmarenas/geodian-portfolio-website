@@ -42,8 +42,14 @@ class Contact extends React.Component {
         </div>
 
         <div className="contact-l-grid__column--2">
-          <Hexagon className={"contact-c-hexagon--1"} />
-          <Hexagon className={"contact-c-hexagon--2"} />
+          <Hexagon
+            className={"contact-c-hexagon--1"}
+            imageUrl={"./bridge.jpg"}
+          />
+          <Hexagon
+            className={"contact-c-hexagon--2"}
+            imageUrl={"./bridge.jpg"}
+          />
         </div>
       </section>
     );

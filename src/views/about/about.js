@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.scss";
-import building from "./building.jpg";
 import Hexagon from "../../components/hexagon/hexagon";
 
 const About = () => (
@@ -41,7 +40,7 @@ const About = () => (
       <div className="about-c__rectangle">
         <div className="about-c__rectangle-overlay" />
       </div>
-      <Hexagon className={"about-c__hexagon"} image={building} />
+      <Hexagon className={"about-c__hexagon"} imageUrl={"./bridge.jpg"} />
     </div>
   </section>
 );

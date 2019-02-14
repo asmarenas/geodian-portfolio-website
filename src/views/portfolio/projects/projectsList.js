@@ -14,7 +14,7 @@ const projects = {
       url: "./img/one-hundred-lights.jpg",
       title: "One Hundred Lights",
       text: "Photography",
-      link: "./"
+      link: "project/myfavorite"
     },
     {
       id: 3,
@@ -22,7 +22,7 @@ const projects = {
       url: "./img/golden-gate.jpg",
       title: "Golden Gate",
       text: "Photography",
-      link: "/portfolio"
+      link: "project/myfavorite"
     }
   ],
 
@@ -33,7 +33,7 @@ const projects = {
       url: "./img/secret-place.jpg",
       title: "A Secret Place",
       text: "Graphic Design",
-      link: "./"
+      link: "project/myfavorite"
     },
     {
       id: 5,
@@ -41,7 +41,7 @@ const projects = {
       url: "./img/side-city.jpg",
       title: "At the Side of A City",
       text: "Graphic Design",
-      link: "./"
+      link: "project/myfavorite"
     }
   ]
 };
