@@ -1,22 +1,22 @@
 @import "../../styles/variables.scss";
 
-.contact-l-grid {
+.l-contact {
   display: flex;
 }
 
-  .contact-l-grid__column--1 {
+  .l-contact__column--1 {
     flex-basis: 97%;
     height: 100%;
     overflow: auto;
     display: flex;
   }
 
-    .contact-c-form {
+    .c-contact-form {
       flex-basis: 100%;
       padding: 1em 1em 1em 3em; ;
     }
 
-      .contact-c-form__input {
+      .c-contact-form__input {
         display: block;
         width: 70%;
         border: none;
@@ -32,7 +32,7 @@
         color: grey;
       }
 
-      .contact-c-form__textarea {
+      .c-contact-form__textarea {
         width: 70%;
         height: 5em;
         display: block;
@@ -43,7 +43,7 @@
         overflow: hidden;
       }
 
-      .contact-c-form__btn {
+      .c-contact-form__btn {
         font-weight: bold;
         background: none;
         padding: 1em 2em;
@@ -53,14 +53,14 @@
       }
 // Shapes
 
-  .contact-l-grid__column--2 {
+  .l-contact__column--2 {
     position: relative;
     height: 100%;
     flex-basis: 3%;
     overflow: hidden;
   }
 
-    .contact-c-hexagon--1 {
+    .c-contact-hexagon--1 {
       position: absolute;
       top: -1107px;
       right: -628px;
@@ -68,7 +68,7 @@
       fill: $dark-overlay;
     }
 
-    .contact-c-hexagon--2 {
+    .c-contact-hexagon--2 {
       position: absolute;
       top: 341px;
       right: -554px;
@@ -80,16 +80,16 @@
 
 @include tablet-portrait {
 
-  .contact-l-grid {
+  .l-contact {
     padding-top: 0;
   }
 
-  .contact-l-grid__column--1 {
+  .l-contact__column--1 {
     justify-content: center;
     align-items: center;
   }
 
-    .contact-c-form {
+    .c-contact-form {
       flex-basis: 70%;
     }
 }
@@ -97,27 +97,27 @@
 @include tablet-landscape {
 
   
-  .contact-l-grid__column--1 {
+  .l-contact__column--1 {
     flex-basis: 64%;
   }
 
-  .contact-l-grid__column--2 {
+  .l-contact__column--2 {
     flex-basis: 36%;
   }
 }
 
 @include laptop {
 
-  .contact-c-form {
+  .c-contact-form {
     flex-basis: 50%;
   }
 
-  .contact-c-hexagon--1 {
+  .c-contact-hexagon--1 {
     top: -1059px;
     right: -628px;
   }
   
-  .contact-c-hexagon--2 {
+  .c-contact-hexagon--2 {
     top: 169px;
     right: -628px;
   }

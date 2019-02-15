@@ -9,6 +9,16 @@
 
 .links__icon {
   margin: 0.8em;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: $active;
+  }
+  
+}
+
+.js-link-is-on-dark-bacground {
+  color: #fff;
 }
 
 //---- Media queries -----//

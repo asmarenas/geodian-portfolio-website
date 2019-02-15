@@ -1,6 +1,6 @@
 @import "../../../styles/variables.scss";
 
-.about__hero {
+.c-about-svg {
   position: absolute;
   left: calc(50% - 899px);
   top: calc(50% - 1197px);
@@ -8,29 +8,33 @@
   height: 1737px;
 }
 
-.hero--big {
-  fill: $dark-overlay;
-}
+  .c-about-svg__hexagon--big {
+    fill: $dark-overlay;
+  }
 
-.hero__overlay {
-  fill: $color-overlay;
-  stroke: #ffe32e;
-}
+  .c-about-svg__hexagon--center {
+    fill: $color-overlay;
+    stroke: #ffe32e;
+  }
 
 @include tablet-portrait {
-  .about__hero {
+
+  .c-about-svg {
     top: calc(50% - 1623px);
     left: calc(50% - 1609px);
     width: 1962px;
     height: 2323px;
   }
+  
 }
 
 @include desktop {
-  .about__hero {
+
+  .c-about-svg {
     top: calc(50% - 1806px);
     left: calc(50% - 2124px);
     width: 2648px;
     height: 2427px;
   }
+
 }

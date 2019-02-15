@@ -5,12 +5,12 @@ import projects from "./projects/projectsList";
 
 const Portfolio = () => {
   return (
-    <section className="portfolio">
-      <div className="portfolio__container">
-        <div className="portfolio__container--secondary secondary-1">
+    <section className="l-portfolio">
+      <div className="l-portfolio__container">
+        <div className="l-portfolio__column l-portfolio__column--left">
           <Project projects={projects.left_column} />
         </div>
-        <div className="portfolio__container--secondary secondary-2">
+        <div className="l-portfolio__column  l-portfolio__column--right">
           <Project projects={projects.right_column} />
         </div>
       </div>

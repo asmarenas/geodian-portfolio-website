@@ -1,20 +1,20 @@
 @import "../../styles/variables.scss";
 
-.home {
+.l-home {
   background: url("./home-background.jpg") no-repeat fixed;
   background-size: cover;
   margin-top: 50px;
   padding-top: 0;
 }
 
-  .home__overlay {
+  .l-home__overlay {
     position: absolute;
     height: 100%;
     width: 100%;
     background: $light-overlay;
   }
 
-    .home__container {
+    .l-home__container {
       position: absolute;
       height: 100%;
       width: 100%;
@@ -24,48 +24,48 @@
       align-items: center;
     }
 
-.home__header {
-  flex-basis: 80%;
-  padding: 0.5em;
-  z-index: 2;
-}
+      .c-home__header {
+        flex-basis: 80%;
+        padding: 0.5em;
+        z-index: 2;
+      }
 
-.home__link {
-  font-size: 1.5em;
-  margin-top: 1.5em;
-}
+      .c-home__link {
+        font-size: 1.5em;
+        margin-top: 1.5em;
+      }
 
 @include tablet-portrait {
 
-  .home {
+  .l-home {
     padding-top: 0;
     margin-top: 0;
   }
-  .home__container {
-    justify-content: flex-end;
-  }
 
-  .home__header {
-    flex-basis: 40em;
-    padding: 4em;
-    //margin-top: 20em;
-  }
+    .l-home__container {
+      justify-content: flex-end;
+    }
+
+      .c-home__header {
+        flex-basis: 40em;
+        padding: 4em;
+      }
 }
 
 @include laptop {
-  .home__container {
-    // justify-content: flex-end;
+
+  .l-home__container {
     align-items: flex-end;
   }
 
-  .home__header {
-    padding: 4em;
-    margin-bottom: 4em;
-  }
+    .c-home__header {
+      padding: 4em;
+      margin-bottom: 4em;
+    }
 }
 
 @include desktop {
-  .home__header {
+  .c-home__header {
     font-size: 26px;
   }
 }

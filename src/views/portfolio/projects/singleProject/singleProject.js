@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 const SingleProject = () => (
-  <section className="project-l-grid">
-    <div className="project-l-grid__container">
-      <main className="project-l-grid__column--1">
-        <div className="project-c-content">
-          <h1 className="project-c-content__title">My First Project for You</h1>
-          <p className="project-c-content__article">
+  <section className="l-single-project">
+    <div className="l-single-project-container">
+      <main className="l-single-project__column--1">
+        <div className="c-single-project">
+          <h1 className="c-single-project__title">My First Project for You</h1>
+          <p className="c-single-project__article">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
             assumenda ea beatae repellendus temporibus facere alias cum fugit
             labore! Labore, quasi sit cupiditate voluptates nostrum illum dolore
@@ -17,70 +17,68 @@ const SingleProject = () => (
             soluta expedita aut Asperiores expedita repellendus nihil assumenda
             nobis atque
           </p>
-          <p className="project-c-content__article">
+          <p className="c-single-project__article">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
             doloribus accusamus dicta, libero cupiditate iure similique!
             Asperiores dolores accusantium officia ipsa alias consectetur
             nesciunt cumque, non eum quo atque iure?
           </p>
-          <p className="project-c-content__article">
+          <p className="c-single-project__article">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
             nesciunt cumque, non eum quo atque iure?
           </p>
-          <p className="project-c-content__article">
+          <p className="c-single-project__article">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
             doloribus accusamus dicta, libero cupiditate iure similique!
             Asperiores dolores accusantium officia ipsa alias consectetur
             nesciunt cumque, non eum quo atque iure?
           </p>
         </div>
-        <div className="project-c-images">
+        <div className="c-single-project-images">
           <img
             src={require("./img/main-top.jpg")}
             alt=""
-            className="project-c-images__img--top"
+            className="c-single-project-images__img--top"
           />
           <img
             src={require("./img/main-bottom.jpg")}
             alt=""
-            className="project-c-images__img--bottom"
+            className="c-single-project-images__img--bottom"
           />
         </div>
       </main>
-      {/* -------- */}
-      {/* -------- */}
-      {/* -------- */}
-      <aside className="project-l-grid__column--2">
-        <div className="project-c-info">
-          <h2 className="project-c-info__title">Project Details </h2>
 
-          <div className="project-c-info__text-container">
-            <p className="project-c-info__text--left">Date</p>
-            <p className="project-c-info__text--right">January, 2, 2017</p>
+      <aside className="l-single-project__column--2">
+        <div className="c-single-project__info">
+          <h2 className="c-single-project__title">Project Details </h2>
+
+          <div className="c-single-project__text-container">
+            <p className="c-single-project__text--left">Date</p>
+            <p className="c-single-project__text--right">January, 2, 2017</p>
           </div>
 
-          <div className="project-c-info__text-container">
-            <p className="project-c-info__text--left">Category</p>
-            <p className="project-c-info__text--right">Web Design</p>
+          <div className="c-single-project__text-container">
+            <p className="c-single-project__text--left">Category</p>
+            <p className="c-single-project__text--right">Web Design</p>
           </div>
 
-          <div className="project-c-info__text-container">
-            <p className="project-c-info__text--left" />
-            <p className="project-c-info__text--right">Graphic Design</p>
+          <div className="c-single-project__text-container">
+            <p className="c-single-project__text--left" />
+            <p className="c-single-project__text--right">Graphic Design</p>
           </div>
 
-          <div className="project-c-info__text-container">
-            <p className="project-c-info__text--left" />
-            <p className="project-c-info__text--right">Consultance</p>
+          <div className="c-single-project__text-container">
+            <p className="c-single-project__text--left" />
+            <p className="c-single-project__text--right">Consultance</p>
           </div>
 
-          <div className="project-c-info__text-container">
-            <p className="project-c-info__text--left">Client</p>
-            <p className="project-c-info__text--right">Rocian Studio</p>
+          <div className="c-single-project__text-container">
+            <p className="c-single-project__text--left">Client</p>
+            <p className="c-single-project__text--right">Rocian Studio</p>
           </div>
 
-          <h2 className="project-c-info__links-title">Share This Project</h2>
-          <div className="project-c-info__links-container">
+          <h2 className="c-single-project__links-title">Share This Project</h2>
+          <div className="c-single-project__links-container">
             <a
               href="https://www.facebook.com/error-no-page"
               target="_blank"
@@ -116,7 +114,7 @@ const SingleProject = () => (
             </a>
           </div>
         </div>
-        <div className="project-c-info__img-container">
+        <div className="c-single-project__img-container">
           <img
             src={require("./img/aside.jpg")}
             alt=""
@@ -124,10 +122,10 @@ const SingleProject = () => (
           />
         </div>
       </aside>
-      <div className="project-l-grid__column--3">
-        <Link className="project-c-footer__link" to="/portfolio">
+      <div className="l-single-project__column--3">
+        <Link className="c-single-project__link" to="/portfolio">
           <FontAwesomeIcon
-            className="project-c-footer__icon"
+            className="c-single-project__icon"
             icon="caret-left"
             size="lg"
           />

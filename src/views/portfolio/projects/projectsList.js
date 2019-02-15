@@ -2,7 +2,7 @@ const projects = {
   left_column: [
     {
       id: 1,
-      figure_class: "figure__favorite-collection",
+      project_class_name: "c-project--favorite-collection",
       url: "./img/my-favorite-collection.jpg",
       title: "My Favorite Collection",
       text: "Photography",
@@ -10,7 +10,7 @@ const projects = {
     },
     {
       id: 2,
-      figure_class: "figure__one-hundred-lights",
+      project_class_name: "c-project--one-hundred-lights",
       url: "./img/one-hundred-lights.jpg",
       title: "One Hundred Lights",
       text: "Photography",
@@ -18,7 +18,7 @@ const projects = {
     },
     {
       id: 3,
-      figure_class: "figure__golden-gate",
+      project_class_name: "c-project--golden-gate",
       url: "./img/golden-gate.jpg",
       title: "Golden Gate",
       text: "Photography",
@@ -29,7 +29,7 @@ const projects = {
   right_column: [
     {
       id: 4,
-      figure_class: "figure__secret-place",
+      project_class_name: "c-project--secret-place",
       url: "./img/secret-place.jpg",
       title: "A Secret Place",
       text: "Graphic Design",
@@ -37,7 +37,7 @@ const projects = {
     },
     {
       id: 5,
-      figure_class: "figure__side-city",
+      project_class_name: "c-project--side-city",
       url: "./img/side-city.jpg",
       title: "At the Side of A City",
       text: "Graphic Design",

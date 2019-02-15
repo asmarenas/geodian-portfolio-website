@@ -3,7 +3,7 @@ import "./hero.scss";
 
 const Hero = () => (
   <svg
-    className="about__hero"
+    className="c-about-svg"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 2548.998 2420.999"
@@ -41,7 +41,7 @@ const Hero = () => (
       </filter>
     </defs>
 
-    <g className="hero--big" transform="translate(-437 -768)">
+    <g className="c-about-svg__hexagon--big" transform="translate(-437 -768)">
       <path
         d="M2718,2432,1657,1826.75V616.25L2718,11l1061,605.249V1423L3426,1624.5v403l.541.308Z"
         transform="translate(-1219.999 757)"
@@ -54,7 +54,7 @@ const Hero = () => (
           transform="translate(1082 1275)"
         />
         <path
-          className="hero__overlay"
+          className="c-about-svg__hexagon--center"
           d="M1040,137,687,338.5v403L1040,943l353-201.5v-403Z"
           transform="translate(1082 1275)"
         />

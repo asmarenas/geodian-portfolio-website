@@ -1,60 +1,62 @@
 @import "../../styles/variables.scss";
 
-.portfolio {
- 
-  &__container {
-    height: 100%;
-    padding-bottom: 2em;
-    width: 100%;
-    overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
+.l-portfolio__container {
+  height: 100%;
+  padding-bottom: 2em;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  &__container--secondary {
+  .l-portfolio__column {
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
   }
-}
+
 
 @include tablet-portrait {
-  .portfolio {
+
+   .l-portfolio {
     padding-top: 0;
-    &__container {
+   }
+    
+    .l-portfolio__container{
       justify-content: center;
       margin-top: 5em;
       height: calc(100% - 5em);
     }
 
-    &__container--secondary {
-      flex-basis: 43%;
-    }
-  }
+      .l-portfolio__column {
+        flex-basis: 43%;
+      }
 
-  .secondary-1 {
-    justify-content: space-between;
-  }
-  .secondary-2 {
-    justify-content: space-around;
-    align-items: center;
-  }
+      .l-portfolio__column--left {
+        justify-content: space-between;
+      }
+
+      .l-portfolio__column--right {
+        justify-content: space-around;
+        align-items: center;
+      }
+
 }
 
 @include laptop {
-  .portfolio {
-    &__container--secondary {
-      flex-basis: 37%;
-      height: 1900px;
-    }
+
+  .l-portfolio__column {
+    flex-basis: 37%;
+    height: 1900px;
   }
+ 
 }
 
 @include desktop {
-  .portfolio {
-    &__container--secondary {
-      flex-basis: 40%;
-      height: 2400px;
-    }
+
+  .l-portfolio__column {
+    flex-basis: 40%;
+    height: 2400px;
   }
+
 }

@@ -39,8 +39,8 @@ class App extends Component {
               <TransitionGroup>
                 <CSSTransition
                   key={location.key}
-                  classNames="fade"
-                  timeout={600}
+                  classNames="js-fade"
+                  timeout={300}
                 >
                   <Switch location={location}>
                     <Route exact path="/" component={Home} />

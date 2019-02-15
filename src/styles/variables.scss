@@ -3,6 +3,8 @@ $light-overlay: rgba(255, 255, 255, 0.9);
 $color-overlay: rgba(255, 222, 0, 0.88);
 $active: rgb(255, 222, 0);
 
+//-- Mixins for media queries --// 
+
 @mixin phone-landscape {
   @media (min-width: 700px) and (min-height: 200px) {
     @content;
@@ -39,22 +41,4 @@ $active: rgb(255, 222, 0);
   }
 }
 
-///////////////
 
-@mixin laptop-1 {
-  @media screen and (max-width: 1600px) {
-    @content;
-  }
-}
-
-@mixin tablet-landscape {
-  @media screen and (min-width: 900px) {
-    @content;
-  }
-}
-
-@mixin phone-portrait {
-  @media screen and (max-width: 600px) {
-    @content;
-  }
-}

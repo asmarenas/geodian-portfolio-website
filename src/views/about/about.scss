@@ -1,11 +1,11 @@
 @import "../../styles/variables.scss";
 
-.about-l-grid {
+.l-about {
   display: flex;
   flex-wrap: nowrap;
 }
 
-  .about-l-grid__column-1 {
+  .l-about__column--1 {
     flex-basis: 97%;
     height: 100%;
     overflow: auto;
@@ -13,47 +13,47 @@
     justify-content: center;
   } 
 
-    .about-c-content {
+    .c-about-content {
       flex-basis: 90%;
     } 
 
-      .about-c-content__skills-graph {
+      .c-about-content__skills-graph {
         width: 80%;
         margin-bottom: 30px;
       }
 
-        .about-c-content__skill-container {
+        .c-about-content__skill-container {
           display: flex;
           justify-content: space-between;
           align-items: center;
           border-bottom: 2px solid grey;
         }
 
-          .about-c-content__color-line--web {
+          .c-about-content__color-line--web {
             width: 85%;
             border-top: 6px solid $active;
             margin-top: -4px;
           }
 
-          .about-c-content__color-line--html {
+          .c-about-content__color-line--html {
             width: 65%;
             border-top: 6px solid $active;
             margin-top: -4px;
           }
 
-          .about-c-content__color-line--js {
+          .c-about-content__color-line--java {
             width: 70%;
             border-top: 6px solid $active;
             margin-top: -4px;
           }
 
-  .about-l-grid__column-2 {
+  .l-about__column--2 {
     flex-basis: 3%;
     overflow: hidden;
     position: relative;
    }
 
-    .about-c__rectangle {
+    .c-about__rectangle {
       height: 100%;
       width: 60%;
       margin: 0 0 0 auto;
@@ -62,12 +62,12 @@
       background-position: right bottom;
     }
 
-    .about-c__rectangle-overlay {height: 100%;
+    .c-about__rectangle-overlay {height: 100%;
       width: 100%;
       background: $dark-overlay;
     }
 
-    .about-c__hexagon {
+    .c-about__hexagon {
       position: absolute;
       top: -199px;
       right: -240px;
@@ -77,37 +77,37 @@
 
 @include tablet-portrait {
 
-  .about-l-grid__column-1 {
+  .l-about__column--1 {
     align-items: center;
   }
 
-    .about-c-content {
+    .c-about-content {
       flex-basis: 60%;
     }
 
-      .about-c-content__skills-graph {
+      .c-about-content__skills-graph {
         width: 60%;
       }
 }
 
 @include tablet-landscape {
 
-  .about-l-grid {
+  .l-about {
     padding-top: 0;
   }
 
-  .about-l-grid__column-1 {
-    flex-basis: 64%;
-    height: 100%;
-    justify-content: flex-end;
-  } 
-
-    .about-c-content {
-      flex-basis: 70%;
-      margin-right: 2em;
+    .l-about__column--1 {
+      flex-basis: 64%;
+      height: 100%;
+      justify-content: flex-end;
     } 
 
-  .about-l-grid__column-2 {
+      .c-about-content {
+        flex-basis: 70%;
+        margin-right: 2em;
+      } 
+
+  .l-about__column--2 {
     flex-basis: 36%;
    }
 }
@@ -115,24 +115,24 @@
 
 @include laptop {
 
-  .about-l-grid__column-1 {
+  .l-about__column--1 {
     flex-basis: 50%;
   } 
 
-  .about-l-grid__column-2 {
+  .l-about__column--2 {
     flex-basis: 50%;
   }
 
-  .about-c__hexagon {
-    top: -799px;
-    right: -451px;
-    width: 1138px;
-  }
+    .c-about__hexagon {
+      top: -799px;
+      right: -451px;
+      width: 1138px;
+    }
 }
 
 @include desktop {
 
-  .about-c__hexagon {
+  .c-about__hexagon {
     top: -1073px;
     right: -593px;
     width: 1500px;
