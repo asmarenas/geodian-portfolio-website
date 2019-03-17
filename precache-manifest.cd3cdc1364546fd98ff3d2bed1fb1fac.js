@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/Geodian/static/css/1.1278d3ce.chunk.css"
   },
   {
-    "revision": "ed9e1453e52b024e3e8371e6c0dfd798",
+    "revision": "a2f69d146173b8335ac244e4bbb2ad22",
     "url": "/Geodian/index.html"
   }
 ];
