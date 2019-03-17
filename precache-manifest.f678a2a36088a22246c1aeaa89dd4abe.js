@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/Geodian/static/media/home-background.70b26787.jpg"
   },
   {
-    "revision": "f64dec4d24bfed445956",
+    "revision": "c36249e2256ce2d13be2",
     "url": "/Geodian/static/css/main.65014cbb.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/Geodian/static/media/main-top.32539b61.jpg"
   },
   {
-    "revision": "f64dec4d24bfed445956",
-    "url": "/Geodian/static/js/main.f64dec4d.chunk.js"
+    "revision": "c36249e2256ce2d13be2",
+    "url": "/Geodian/static/js/main.c36249e2.chunk.js"
   },
   {
     "revision": "aa1e4f604fb0bcc712f083acc93ee5b6",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/Geodian/static/css/1.1278d3ce.chunk.css"
   },
   {
-    "revision": "9550d6afe499c21d5bd051ff0038ba29",
+    "revision": "a796af5036d2dab1d6dc980c7b36afa5",
     "url": "/Geodian/index.html"
   }
 ];

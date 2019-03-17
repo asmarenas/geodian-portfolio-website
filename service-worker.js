@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Geodian/precache-manifest.42b136bbab067b8d8a584ef481278d1b.js"
+  "/Geodian/precache-manifest.f678a2a36088a22246c1aeaa89dd4abe.js"
 );
 
 workbox.clientsClaim();
