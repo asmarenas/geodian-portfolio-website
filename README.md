@@ -7,7 +7,7 @@ Website template built with React. It has 5 demo pages:
  4. About
  5. Contact
 
-[Live Demo](https://geodian.asmarenas.pl/)
+[Live Demo](https://mariusjagminas.github.io/Geodian/)
 
 ### Build with:
 * React
