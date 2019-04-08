@@ -30,8 +30,9 @@ library.add(
 
 class App extends Component {
   render() {
+    console.log(process.env.PUBLIC_URL);
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Route
           render={({ location }) => (
             <div className="container__main">
@@ -43,8 +44,8 @@ class App extends Component {
                   timeout={300}
                 >
                   <Switch location={location}>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/portfolio" component={Portfolio} />
+                    <Route exact path='/' component={Home} />
+                    <Route path='/portfolio'component={Portfolio} />
                     <Route
                       path="/project/myfavorite"
                       component={SingleProject}

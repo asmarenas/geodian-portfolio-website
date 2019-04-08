@@ -24,7 +24,7 @@ const Navigation = ({ state, handleClick }) => {
             <NavLink
               exact
               className={`c-navigation__link ${navLinkClass}`}
-              to="/"
+              to= '/'
             >
               Home
             </NavLink>
